@@ -476,13 +476,7 @@ func buildTestConfig(t *testing.T, positionsFileName string, logDirName string) 
 		},
 	}
 
-	stages := []logentry.PipelineStage{
-		{
-			"regex": map[string]interface{}{
-				"expr": "./*",
-			},
-		},
-	}
+	stages := logentry.PipelineStages{}
 
 	scrapeConfig := scrape.Config{
 		JobName:                "",
